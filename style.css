@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(
+135deg,
+#ffd6e7,
+#ffe7c7,
+#fff3c9
+);
+min-height:100vh;
+overflow-x:hidden;
+}
+
+/* SCREEN */
+
+.screen{
+display:none;
+min-height:100vh;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+.screen.active{
+display:flex;
+}
+
+/* GLASS CARD */
+
+.glass{
+width:100%;
+max-width:700px;
+padding:40px;
+border-radius:30px;
+background:rgba(255,255,255,.65);
+backdrop-filter:blur(15px);
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+text-align:center;
+}
+
+/* TEXT */
+
+h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+h2{
+margin-bottom:15px;
+}
+
+h3{
+margin-top:20px;
+}
+
+p{
+line-height:1.7;
+margin-bottom:15px;
+}
+
+/* INPUT */
+
+input{
+width:100%;
+padding:16px;
+border:none;
+border-radius:15px;
+margin-top:15px;
+margin-bottom:20px;
+font-size:16px;
+}
+
+/* BUTTON */
+
+button{
+padding:14px 28px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+background:#ff89b4;
+color:white;
+transition:.3s;
+margin:5px;
+}
+
+button:hover{
+transform:translateY(-3px);
+}
+
+/* QUIZ ANSWERS */
+
+.answerBtn{
+display:block;
+width:100%;
+margin:10px 0;
+padding:15px;
+font-size:15px;
+}
+
+/* SCORE */
+
+#scoreText{
+font-size:60px;
+margin:20px 0;
+}
+
+/* VIDEO */
+
+video{
+width:100%;
+max-width:400px;
+border-radius:20px;
+margin-top:20px;
+}
+
+canvas{
+display:none;
+}
+
+/* FINAL */
+
+.bigHeart{
+font-size:90px;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.2);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* FLOATING HEARTS */
+
+.floating-hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.floating-hearts::before{
+content:"❤️ ❤️ 🎀 ❤️ ✨ ❤️";
+position:absolute;
+font-size:30px;
+animation:floatUp 15s linear infinite;
+bottom:-100px;
+left:10%;
+}
+
+@keyframes floatUp{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-120vh);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+h1{
+font-size:30px;
+}
+
+.glass{
+padding:25px;
+}
+
+#scoreText{
+font-size:40px;
+}
+
+}
