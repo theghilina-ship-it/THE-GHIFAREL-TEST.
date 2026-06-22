@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Ghifarel Test 🎟️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="floating-hearts"></div>
+
+<!-- LOGIN -->
+
+<section id="loginPage" class="screen active">
+
+<div class="glass">
+
+<h1>🎟️ ACCESS GATE</h1>
+
+<p>
+Enter your official ticket ID
+</p>
+
+<input
+type="text"
+id="ticketInput"
+placeholder="GHI-230625-01">
+
+<button onclick="verifyTicket()">
+Unlock Test
+</button>
+
+<p id="loginError"></p>
+
+</div>
+
+</section>
+
+<!-- LOADING -->
+
+<section id="loadingPage" class="screen">
+
+<div class="glass">
+
+<h1>⚠️ Verification</h1>
+
+<div id="loadingText">
+
+<p>Checking memories...</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section id="quizPage" class="screen">
+
+<div class="glass">
+
+<h2 id="questionNumber">
+Question 1 / 10
+</h2>
+
+<h1 id="questionText"></h1>
+
+<div id="answers"></div>
+
+</div>
+
+</section>
+
+<!-- RESULT -->
+
+<section id="resultPage" class="screen">
+
+<div class="glass">
+
+<h1>🏆 TEST COMPLETE</h1>
+
+<h2 id="scoreText"></h2>
+
+<h3 id="rankText"></h3>
+
+<button onclick="showPage('photoPage')">
+Continue
+</button>
+
+</div>
+
+</section>
+
+<!-- PHOTOBOOTH -->
+
+<section id="photoPage" class="screen">
+
+<div class="glass">
+
+<h1>📸 Photobooth</h1>
+
+<p>
+Take your certified boyfriend photo 😋
+</p>
+
+<video
+id="video"
+autoplay
+playsinline> </video>
+
+<br><br>
+
+<button onclick="startCamera()">
+Open Camera
+</button>
+
+<button onclick="capturePhoto()">
+Capture
+</button>
+
+<canvas id="canvas"></canvas>
+
+<button onclick="showPage('finalPage')">
+Continue
+</button>
+
+</div>
+
+</section>
+
+<!-- FINAL -->
+
+<section id="finalPage" class="screen">
+
+<div class="glass">
+
+<h1>🎁 Reward Unlocked</h1>
+
+<h2>1 Year Completed ❤️</h2>
+
+<p>
+Next Mission:
+Year 2
+</p>
+
+<div class="bigHeart">
+❤️
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
